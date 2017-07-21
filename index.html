@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Wirginia i Piotr</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="description" content="Wirginia i Piotr">
-    <meta name="theme-color" content="#FFB6C1">
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <base href="/">
-  </head>
-  <body style="font-size: 3vh; background: #eceeef;" ng-app="app" ng-strict-di ng-cloak>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PwaTimerApp</title>
+  <base href="/">
 
-  <app>
-    <div style="width: 100vw; height: 100vh;
-      display: flex; justify-content: center; flex-direction: column; align-items: center">
-      <img style="height: 14vh" src="./images/loading.png" alt="">
-      <div style="margin: 1em; font-size: 2vh">Chwileczkę...</div>
-    </div>
-  </app>
-  <script src="vendor.bundle.js?dd6f14e9a16bd16a30f3"></script><script src="app.bundle.js?dd6f14e9a16bd16a30f3"></script></body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css?family=Artifika" rel="stylesheet">
+<link href="styles.372c5427b521a48b64b0.bundle.css" rel="stylesheet"/></head>
+<body>
+  <app-root>
+    <img class="loading" src="assets/loading.png" alt="">
+  </app-root>
+  <script>
+    if (window.navigator) {
+      window.navigator.serviceWorker.register('service-worker.js').then(function (e) {
+        console.log('service worker registered!', e);
+      })
+    }
+  </script>
+<script type="text/javascript" src="inline.c026e1099fd33d312803.bundle.js"></script><script type="text/javascript" src="polyfills.c1493f54ebce2761c8b6.bundle.js"></script><script type="text/javascript" src="vendor.6bb0b0c9713723d09764.bundle.js"></script><script type="text/javascript" src="main.f124e0441cf30bd44641.bundle.js"></script></body>
 </html>
